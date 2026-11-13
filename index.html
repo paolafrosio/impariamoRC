@@ -126,8 +126,8 @@
         body.phone-preview-mode #app-shell #btn-open-visual-learn,
         body.phone-preview-mode #app-shell #btn-open-guide,
         body.phone-preview-mode #app-shell #btn-open-lang { padding-left: 7px !important; padding-right: 7px !important; }
-        body.phone-preview-mode #app-shell #btn-open-visual-learn span { display: none !important; }
-        body.phone-preview-mode #app-shell #btn-open-visual-learn::after { content: "Impara"; font-size: 0.7rem; font-weight: 700; }
+        body.phone-preview-mode #app-shell #btn-open-visual-learn #lbl-learn-full { display: none !important; }
+        body.phone-preview-mode #app-shell #btn-open-visual-learn #lbl-learn-short { display: inline !important; font-size: 0.7rem; font-weight: 700; }
         body.phone-preview-mode #app-shell #btn-open-guide span { display: none !important; }
         body.phone-preview-mode #app-shell #btn-open-lang #current-lang-badge { display: inline !important; font-size: 0.68rem !important; }
     </style>
@@ -2387,10 +2387,10 @@
             {
                 badge: "Punti",
                 title: "1. Disegna il tuo primo punto",
-                desc: "In RoboCompass ogni punto ha due coordinate: orizzontale (x) e verticale (y). <strong>Scrivi un comando per disegnare il ponto A alle coordinate (3, 2).</strong>",
+                desc: "In RoboCompass ogni punto ha due coordinate: orizzontale (x) e verticale (y). <strong>Scrivi un comando per disegnare il punto A alle coordinate (3, 2).</strong>",
                 hint: "Scrivi A = point(3, 2) nell'editor e premi Disegna.",
                 solution: "A = point(3, 2)",
-                starter: "A = point(3, 2)",
+                starter: "",
                 verify: (objs) => {
                     const pts = Object.values(objs).filter(o => o.type === 'point');
                     const found = pts.some(p => Math.hypot(p.x - 3, p.y - 2) < 0.05);
