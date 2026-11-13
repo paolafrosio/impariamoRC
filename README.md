@@ -12,9 +12,3 @@ Applicazione web interattiva multilingue (14 lingue) per imparare la geometria e
 - `js/canvas.js` — Motore di disegno sul foglio quadrettato
 - `js/visual-learn.js` — Finestra "Impara guardando" e mini-video tutorial
 - `js/app.js` — Gestione interfaccia, impostazioni e avvio
-
-## Come pubblicare su GitHub Pages
-
-1. Carica tutti questi file e cartelle nel tuo repository GitHub.
-2. Vai su **Settings → Pages**.
-3. Sotto **Build and deployment**, scegli **Deploy from a branch**, seleziona `main` e `/ (root)`, poi clicca **Save**.
