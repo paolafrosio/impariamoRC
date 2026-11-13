@@ -1,0 +1,117 @@
+:root {
+    --paper-bg: #FAF9F6;
+    --paper-card: #FFFFFF;
+    --ink-primary: #18181B;
+    --accent-vermilion: #EA580C;
+}
+body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--paper-bg);
+    color: var(--ink-primary);
+    overflow-x: hidden;
+    -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3, .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+}
+code, textarea.code-editor, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+}
+/* Previene zoom automatico su iOS (font-size >= 16px) */
+textarea.code-editor, select {
+    font-size: 16px !important;
+}
+/* Pulsanti tattili con micro-risposta fisica */
+.tactile-btn {
+    min-height: 46px;
+    transition: transform 0.1s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.tactile-btn:active {
+    transform: translateY(1px) scale(0.985);
+}
+canvas {
+    touch-action: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+/* Micro-pattern puntinato stile taccuino tecnico */
+.dot-paper {
+    background-image: radial-gradient(#D6D3CD 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+@keyframes pulseRing {
+    0%, 100% {
+        background-color: #FBBF24;
+        border-color: #FFFFFF;
+        box-shadow: 0 0 0 0 rgba(251, 191, 36, 0.95);
+        transform: scale(1.1);
+    }
+    50% {
+        background-color: #F97316;
+        border-color: #FEF08A;
+        box-shadow: 0 0 0 8px rgba(251, 191, 36, 0);
+        transform: scale(1.45);
+    }
+}
+.color-dot-pulse {
+    animation: pulseRing 1.1s ease-in-out infinite;
+}
+/* Cornice simulazione telefono su schermi desktop */
+body.phone-preview-mode {
+    background-color: #27272A;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+body.phone-preview-mode #app-shell {
+    width: 390px;
+    max-width: 100%;
+    height: min(812px, calc(100vh - 24px));
+    min-height: 0 !important;
+    border-radius: 36px;
+    border: 8px solid #18181B;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+    overflow: hidden;
+    position: relative;
+}
+/* Forza il layout mobile dentro la cornice anche su finestra larga */
+body.phone-preview-mode #app-shell main { flex: 1 1 0% !important; min-height: 0 !important; height: auto !important; padding-bottom: 58px !important; }
+body.phone-preview-mode #app-shell main > div { flex: 1 1 0% !important; min-height: 0 !important; height: 100% !important; overflow: hidden !important; }
+body.phone-preview-mode #app-shell .lg\:flex-row { flex-direction: column !important; }
+body.phone-preview-mode #app-shell .lg\:w-5\/12,
+body.phone-preview-mode #app-shell .lg\:w-7\/12 { width: 100% !important; }
+body.phone-preview-mode #app-shell .lg\:border-r { border-right-width: 0 !important; }
+body.phone-preview-mode #app-shell .lg\:h-full { height: 100% !important; }
+body.phone-preview-mode #app-shell .lg\:hidden { display: flex !important; }
+body.phone-preview-mode #app-shell nav.lg\:hidden { display: grid !important; position: absolute !important; }
+body.phone-preview-mode #app-shell .lg\:hidden.grid-cols-2 { display: grid !important; }
+body.phone-preview-mode #app-shell #left-col.mobile-hidden-col { display: none !important; }
+body.phone-preview-mode #app-shell .tab-panel { display: none !important; }
+body.phone-preview-mode #app-shell .tab-panel.active-mobile-panel { display: flex !important; flex-direction: column !important; flex: 1 1 0% !important; min-height: 0 !important; height: 100% !important; overflow-y: auto !important; }
+body.phone-preview-mode #app-shell #tab-canvas.active-mobile-panel { overflow: hidden !important; }
+body.phone-preview-mode #app-shell #canvas-wrapper { flex: 1 1 0% !important; height: 100% !important; min-height: 0 !important; position: relative !important; }
+body.phone-preview-mode #app-shell #geometry-canvas { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; }
+body.phone-preview-mode #app-shell #guide-modal,
+body.phone-preview-mode #app-shell #visual-learn-modal { position: absolute !important; align-items: flex-end !important; padding: 0 !important; }
+body.phone-preview-mode #app-shell #guide-modal > div,
+body.phone-preview-mode #app-shell #visual-learn-modal > div { border-radius: 24px 24px 0 0 !important; max-height: 92% !important; }
+body.phone-preview-mode #app-shell header { padding-left: 8px !important; padding-right: 8px !important; gap: 6px !important; }
+body.phone-preview-mode #app-shell header h1 { display: block !important; font-size: 0.76rem !important; line-height: 1.1 !important; }
+body.phone-preview-mode #app-shell header p { display: none !important; }
+body.phone-preview-mode #app-shell #header-compass-badge { display: flex !important; width: 26px !important; height: 26px !important; border-radius: 8px !important; }
+body.phone-preview-mode #app-shell #header-compass-badge svg { width: 14px !important; height: 14px !important; }
+body.phone-preview-mode #app-shell #btn-view-pc span,
+body.phone-preview-mode #app-shell #btn-view-phone span { display: none !important; }
+body.phone-preview-mode #app-shell #btn-open-visual-learn,
+body.phone-preview-mode #app-shell #btn-open-guide,
+body.phone-preview-mode #app-shell #btn-open-lang { padding-left: 7px !important; padding-right: 7px !important; }
+body.phone-preview-mode #app-shell #btn-open-visual-learn #lbl-learn-full { display: none !important; }
+body.phone-preview-mode #app-shell #btn-open-visual-learn #lbl-learn-short { display: inline !important; font-size: 0.7rem; font-weight: 700; }
+body.phone-preview-mode #app-shell #btn-open-guide span { display: none !important; }
+body.phone-preview-mode #app-shell #btn-open-lang #current-lang-badge { display: inline !important; font-size: 0.68rem !important; }
