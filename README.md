@@ -12,3 +12,9 @@ Applicazione web interattiva multilingue (14 lingue) per imparare la geometria e
 - `js/canvas.js` — Motore di disegno sul foglio quadrettato
 - `js/visual-learn.js` — Finestra "Impara guardando" e mini-video tutorial
 - `js/app.js` — Gestione interfaccia, impostazioni e avvio
+
+---
+
+## Nota legale e finalità didattica
+
+Questo progetto è un'applicazione didattica indipendente e gratuita, realizzata esclusivamente a scopo educativo per aiutare gli studenti a esercitarsi con la geometria e con la sintassi dei comandi di RoboCompass. Non è affiliata, sponsorizzata o approvata ufficialmente dagli autori o dai proprietari del marchio **RoboCompass**.
