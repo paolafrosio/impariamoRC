@@ -15,10 +15,10 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body class="bg-[#FAF9F6] text-zinc-900 h-[100dvh] lg:min-h-screen flex flex-col overflow-hidden lg:overflow-visible">
+<body class="bg-[#FAF9F6] text-zinc-900 h-[100dvh] lg:h-screen flex flex-col overflow-hidden">
 
-    <div id="app-shell" class="bg-[#FAF9F6] text-zinc-900 h-full lg:min-h-screen flex flex-col w-full overflow-hidden lg:overflow-visible">
-
+    <div id="app-shell" class="bg-[#FAF9F6] text-zinc-900 h-full flex flex-col w-full overflow-hidden">
+        
     <!-- Schermata iniziale di benvenuto -->
     <section id="welcome-screen" class="fixed inset-0 z-40 bg-[#FAF9F6] dot-paper flex flex-col items-center justify-center p-6 text-center transition-opacity duration-300">
         <div class="max-w-lg w-full flex flex-col items-center">
@@ -130,14 +130,13 @@
     </div>
 
     <!-- Contenitore Principale (Altezza fluida con spazio fisso per la bottom bar mobile) -->
-    <main class="flex-1 min-h-0 flex flex-col lg:flex-row lg:h-[calc(100vh-106px)] pb-[58px] lg:pb-0 overflow-hidden">
+  <main class="flex-1 min-h-0 flex flex-col lg:flex-row pb-[58px] lg:pb-0 overflow-hidden">
         
         <!-- COLONNA SINISTRA: Consegna Esercizio + Editor Comandi -->
-        <div id="left-col" class="w-full lg:w-5/12 xl:w-4/12 flex-1 min-h-0 h-full flex flex-col lg:border-r lg:border-stone-300 bg-[#FAF9F6] lg:h-full overflow-hidden lg:overflow-y-auto">
+        <div id="left-col" class="w-full lg:w-5/12 xl:w-4/12 flex-1 min-h-0 h-full flex flex-col lg:border-r lg:border-stone-300 bg-[#FAF9F6] overflow-hidden">
             
             <!-- SCHEDA 1: CONSEGNA ESERCIZIO -->
-            <section id="tab-exercise" class="tab-panel active-mobile-panel flex-1 min-h-0 overflow-y-auto lg:overflow-visible p-3.5 sm:p-5 dot-paper border-b border-stone-300 lg:flex-shrink-0">
-                <div class="bg-white border border-stone-300 rounded-2xl p-4 sm:p-5 shadow-sm">
+            <section id="tab-exercise" class="tab-panel active-mobile-panel flex-1 min-h-0 overflow-y-auto p-3.5 sm:p-5 lg:p-3.5 dot-paper border-b border-stone-300 lg:flex-initial lg:max-h-[36%]">         <div class="bg-white border border-stone-300 rounded-2xl p-4 sm:p-5 shadow-sm">
                     <div class="flex items-center justify-between gap-2 mb-3">
                         <span id="ex-badge" class="text-[11px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-orange-100 text-orange-800 border border-orange-200">Punti</span>
                         <span id="ex-progress-text" class="text-xs font-mono font-medium text-stone-500">01 / 14</span>
@@ -160,8 +159,7 @@
             </section>
 
             <!-- SCHEDA 2: EDITOR CODICE + TASTIERINO RAPIDO -->
-            <section id="tab-editor" class="tab-panel hidden lg:flex flex-col flex-1 min-h-0 overflow-y-auto bg-white">
-                
+<div id="editor-container" class="relative flex-1 flex bg-[#18181B] min-h-[140px] lg:min-h-[80px] overflow-hidden">                
                 <!-- Promemoria consegna completo visibile su smartphone nella scheda Codice -->
 <div class="lg:hidden bg-[#FAF9F6] border-b border-stone-200 px-3 py-2.5 shrink-0 max-h-36 overflow-y-auto">
     <p class="text-[15px] text-zinc-800 leading-relaxed" id="editor-ex-desc">Caricamento consegna...</p>
