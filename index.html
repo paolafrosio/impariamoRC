@@ -159,8 +159,8 @@
             </section>
 
             <!-- SCHEDA 2: EDITOR CODICE + TASTIERINO RAPIDO -->
-<div id="editor-container" class="relative flex-1 flex bg-[#18181B] min-h-[140px] lg:min-h-[80px] overflow-hidden">                
-                <!-- Promemoria consegna completo visibile su smartphone nella scheda Codice -->
+<section id="tab-editor" class="tab-panel hidden lg:flex flex-col flex-1 min-h-0 overflow-y-auto lg:overflow-hidden bg-white">
+    <!-- Promemoria consegna completo visibile su smartphone nella scheda Codice -->
 <div class="lg:hidden bg-[#FAF9F6] border-b border-stone-200 px-3 py-2.5 shrink-0 max-h-36 overflow-y-auto">
     <p class="text-[15px] text-zinc-800 leading-relaxed" id="editor-ex-desc">Caricamento consegna...</p>
 </div>
@@ -206,8 +206,7 @@
                 </div>
 
                 <!-- Area Editor Grafite -->
-                <div id="editor-container" class="relative flex-grow flex bg-[#18181B] min-h-[150px] lg:min-h-[220px] overflow-hidden">
-                    <div id="line-numbers" class="py-2.5 pb-12 px-1.5 text-right text-zinc-400 bg-[#121215] select-none text-xs font-mono leading-7 border-r border-zinc-800 overflow-hidden shrink-0">1</div>
+<div id="editor-container" class="relative flex-1 flex bg-[#18181B] min-h-[140px] lg:min-h-[80px] overflow-hidden">                    <div id="line-numbers" class="py-2.5 pb-12 px-1.5 text-right text-zinc-400 bg-[#121215] select-none text-xs font-mono leading-7 border-r border-zinc-800 overflow-hidden shrink-0">1</div>
                     <textarea id="code-editor" spellcheck="false" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="Scrivi qui..." class="code-editor w-full h-full bg-[#18181B] text-amber-200 p-2.5 pb-12 text-base leading-7 focus:outline-none resize-none overflow-y-auto overscroll-contain"></textarea>
 
                     <!-- Semplice fumetto vicino al pallino della riga 3 -->
