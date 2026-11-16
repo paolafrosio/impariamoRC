@@ -1244,168 +1244,96 @@ const I18N = {
     },
 
 ne: {
-  langName: "नेपाली",
-  dir: "ltr",
-
-  // Interfaccia principale
-  appTitle: "RoboCompass",
-  appSubtitle: "अन्तरक्रियात्मक ज्यामिति निर्माण",
-  runBtn: "चलाउनुहोस्",
-  resetBtn: "रिसेट",
-  nextBtn: "अर्को अभ्यास",
-  prevBtn: "अघिल्लो अभ्यास",
-  exerciseLabel: "अभ्यास",
-  guideBtn: "आदेश गाइड",
-  visualLearnBtn: "चित्र हेरेर सिक्नुहोस्",
-  settingsBtn: "सेटिङहरू",
-  closeBtn: "बन्द गर्नुहोस्",
-  hintBtn: "संकेत",
-
-  // Schede mobile
-  tabCode: "कोड",
-  tabCanvas: "चित्र",
-  tabTask: "निर्देशन",
-
-  // Finestra Impostazioni
-  settingsTitle: "रेखाचित्र सेटिङहरू",
-  strokeColorLabel: "रेखाको रङ",
-  showLabelsLabel: "बिन्दुका लेबलहरू देखाउनुहोस्",
-  labelOffsetLabel: "लेबलको दूरी (Offset)",
-  speedLabel: "कोर्ने गति",
-
-  // Messaggi di stato ed errori
-  successTitle: "बधाई छ! अभ्यास पूरा भयो!",
-  successMsg: "तपाईंले ज्यामितीय निर्माण सही तरिकाले पूरा गर्नुभयो।",
-  errorLinePrefix: "लाइन",
-  syntaxError: "अमान्य आदेश वा वाक्यरचना त्रुटि।",
-
-  // Guida ai comandi
-  commands: [
-    { cmd: "point(x, y)", desc: "(x, y) निर्देशांकमा बिन्दु बनाउँछ।" },
-    { cmd: "line(A, B)", desc: "बिन्दु A र B जोड्ने रेखाखण्ड कोर्छ।" },
-    { cmd: "arc(C, r, a1, a2)", desc: "केन्द्र C, अर्धव्यास r र कोण a1 देखि a2 सम्मको चाप कोर्छ।" },
-    { cmd: "interpolate(A, B, t)", desc: "A र B बीचको t अनुपातमा (मध्यबिन्दुको लागि 0.5) बिन्दु पत्ता लगाउँछ।" },
-    { cmd: "perp(L, P)", desc: "रेखा L सँग लम्ब हुने गरी बिन्दु P बाट जाने रेखा कोर्छ।" },
-    { cmd: "parallel(L, P)", desc: "रेखा L सँग समानान्तर हुने गरी बिन्दु P बाट जाने रेखा कोर्छ।" },
-    { cmd: "intersect(o1, o2, n)", desc: "दुई रेखा वा वृत्तहरूको प्रतिच्छेदन बिन्दु पत्ता लगाउँछ।" },
-    { cmd: "polygon(A, B, C, ...)", desc: "दिइएका बिन्दुहरू जोडेर बहुभुज बनाउँछ।" },
-    { cmd: "stroke(w)", desc: "रेखाको मोटाइ (px मा) निर्धारण गर्छ।" },
-    { cmd: "fill(color)", desc: "बन्द आकृतिको भित्री रङ भर्छ।" }
-  ],
-
-  // Modale "Impara guardando il disegno" (visual-learn.js)
-  visualLearn: {
-    title: "चित्र कोरेको हेरेर सिक्नुहोस्",
-    modeInteractive: "अन्तरक्रियात्मक प्रयोगशाला",
-    modeVideo: "भिडियो ट्युटोरियल",
-    tabs: {
-      point: "बिन्दु (Point)",
-      line: "रेखा (Line)",
-      arc: "चाप (Arc)",
-      interpolate: "मध्यबिन्दु (Interpolate)",
-      parallel: "समानान्तर (Parallel)",
-      perp: "लम्ब (Perp)",
-      style: "शैली (Style)"
+        welcomeTitle: 'आउनुहोस् <span class="text-orange-600 block sm:inline">RoboCompass</span> को प्रयोग सिकौं',
+        startBtn: 'अहिले सुरु गर्नुहोस्',
+        headerTitle: 'आउनुहोस् <span class="text-orange-600">RoboCompass</span> सिकौं',
+        headerSubtitle: 'ज्यामितीय रचनाहरूको अन्तरक्रियात्मक पुस्तिका',
+        viewPhone: 'फोन',
+        learnShort: 'सिक्नुहोस्',
+        learnFull: 'सिक्नको लागि यहाँ क्लिक गर्नुहोस्',
+        codeBtn: 'कोड',
+        goWrite: 'कोड लेख्न जानुहोस्',
+        hintBtn: 'संकेत',
+        solutionBtn: 'समाधान',
+        editorHeader: '<span class="w-2 h-2 rounded-full bg-orange-500"></span> RoboCompass आदेशहरू',
+        clearBtn: 'सफा गर्नुहोस्',
+        enterKey: 'Enter ↵',
+        editorPlaceholder: 'यहाँ लेख्नुहोस्...',
+        coachColors: '👈 रङहरूको लागि यहाँ क्लिक गर्नुहोस्',
+        runBtn: 'बनाउनुहोस्',
+        runInstantBtn: 'तुरुन्तै बनाउनुहोस्',
+        verifyBtn: 'अभ्यास जाँच्नुहोस्',
+        consoleReady: 'तयार छ। आदेश लेख्नुहोस् र <strong>बनाउनुहोस्</strong> थिच्नुहोस्।',
+        consoleCleared: 'पाना सफा भयो। नयाँ आदेशहरू लेख्नुहोस्।',
+        consoleOk: (n) => `✓ आदेश सफलतापूर्वक चल्यो (${n} तत्वहरू)।`,
+        consoleVerifyOk: '✓ जाँच सफल भयो!',
+        consoleVerifyKo: 'अभ्यास अझै पूरा भएको छैन।',
+        gridChk: 'ग्रिड',
+        resetView: 'केन्द्र',
+        canvasReplay: 'एनिमेसन फेरि हेर्नुहोस्',
+        canvasVerify: 'जाँच्नुहोस्',
+        navTab1: '1. अभ्यास',
+        navTab2: '2. कोड',
+        navTab3: '3. पाना',
+        hintPrefix: 'संकेत:',
+        solLoaded: 'समाधान ट्याब 2. कोडमा लोड भएको छ।',
+        solGoCode: 'ट्याब 2. कोडमा जानुहोस्',
+        exactPrefix: 'बिल्कुल सही!',
+        almostPrefix: 'लगभग:',
+        nextExBtn: 'अर्को अभ्यासमा जानुहोस्',
+        applySettings: 'लागू गर्नुहोस् र फेरि बनाउनुहोस्',
+        settingsCmd: 'छानिएको आदेश',
+        settingsColors: 'रङ:',
+        settingsShowLabel: 'लेबल देखाउनुहोस्:',
+        settingsOffset: 'लेबल अफसेट:',
+        settingsSpeed: 'गति:',
+        lineWord: 'लाइन',
+        emptyLine: '(खाली)',
+        animPoint: 'बिन्दु राख्दै',
+        animLine: 'रेखाखण्ड कोर्दै',
+        animArc: 'चाप कोर्दै',
+        guideModalTitle: 'कोड गाइड',
+        guideModalClose: 'गाइड बन्द गर्नुहोस्',
+        vlearnModalTitle: 'चित्र हेरेर सिक्नुहोस्',
+        vlearnClose: 'अभ्यासमा फर्कनुहोस्',
+        vmodeLab: 'अन्तरक्रियात्मक ल्याब',
+        vmodeVideo: 'भिडियो ट्युटोरियल',
+        vlearnReplay: 'फेरि हेर्नुहोस्',
+        dragOnePt: '👆 चम्किलो बिन्दु तान्नुहोस्',
+        dragTwoPts: '👆 चम्किला बिन्दुहरू तान्नुहोस्',
+        pauseBtn: '⏸ रोक्नुहोस्',
+        resumeBtn: '▶ जारी राख्नुहोस्',
+        replayClipBtn: '▶ फेरि हेर्नुहोस्',
+        restartClipBtn: '↺ फेरि हेर्नुहोस्',
+        vtabs: { point: '1. बिन्दु', line: '2. रेखाहरू', arc: '3. चाप', interpolate: '4. मध्यबिन्दु', parallel: '5. समानान्तर', perp: '6. लम्ब', style: '7. रङ' },
+        vclipTitles: { point: 'बिन्दु कसरी बनाउने', line: 'line() बाट दुई बिन्दु जोड्नुहोस्', arc: 'arc() सँग कम्पासको प्रयोग', interpolate: 'मध्यबिन्दु पत्ता लगाउनुहोस्', parallel: 'समानान्तर रेखा कोर्नुहोस्', perp: '90° मा लम्ब रेखा कोर्नुहोस्', style: 'मोटाइ, भराव र रङ' },
+        vlearnExp: {
+            point: 'पहिलो संख्या <strong>x</strong> तेर्सो (दायाँ/बायाँ) सार्छ, दोस्रो संख्या <strong>y</strong> ठाडो (माथि/तल) सार्छ।',
+            line: 'आदेश <strong>line(A, B)</strong> ले दुई बिन्दुहरू बीच रुलर राखेर सिधा रेखा कोर्छ।',
+            arc: '<strong>arc(O, अर्धव्यास, सुरु, फैलाव)</strong> बाट तपाईं कम्पासलाई O मा राख्नुहुन्छ, अर्धव्यास, सुरुको कोण (<strong>हरियो</strong>) र घुम्ने डिग्री (<strong>सुन्तला</strong>) छान्नुहुन्छ।',
+            interpolate: '<strong>point(interpolate(A, B, अंश))</strong> बाट रेखाखण्ड AB मा एक बिन्दु प्राप्त हुन्छ: <strong>0.5</strong> सँग तपाईं ठीक बीचमा हुनुहुन्छ!',
+            parallel: '<strong>parallel(s1, P, लम्बाइ)</strong> बाट बिन्दु <strong>P</strong> हुँदै जाने <strong>s1</strong> सँग समानान्तर रेखा कोरिन्छ।',
+            perp: '<strong>perp(s1, P, लम्बाइ)</strong> बाट बिन्दु <strong>P</strong> हुँदै जाने <strong>s1</strong> मा <strong>90°</strong> लम्ब रेखा कोरिन्छ।',
+            style: 'रेखा मोटो बनाउन <strong>stroke(c1, मोटाइ)</strong>, भित्र रङ भर्न <strong>fill(c1, पारदर्शिता)</strong> र रङ बदल्न सम्पादकमा रङ्गीन थोप्लो प्रयोग गर्नुहोस्।'
+        },
+        vlearnLineNote: 'A र B लाई जोड्ने भर्चुअल रुलर हेर्नको लागि ग्राफमा <strong>फेरि हेर्नुहोस्</strong> थिच्नुहोस्।',
+        sliders: { x: 'तेर्सो X:', y: 'ठाडो Y:', r: 'अर्धव्यास:', start: 'सुरु:', sweep: 'फैलाव:', ratio: 'AB मा अंश:', len: 'लम्बाइ:', sw: 'मोटाइ:', fo: 'भराव:' },
+        vclipSubs: {
+            point: ["1. हामी मूल बिन्दु (0, 0) बाट सुरु गर्छौं र दायाँतिर 3 कोठा गन्छौं।", "2. अब हामी ठाडो रूपमा 2 कोठा माथि जान्छौं।", "3. यो रह्यो समतलमा बिन्दु A(3, 2)!"],
+            line: ["1. पहिले हामी दुई अन्तिम बिन्दु A र B बनाउँछौं।", "2. रुलरले line(A, B) बाट A र B लाई जोड्छ।", "3. रेखाखण्ड s1 पूरा भयो!"],
+            arc: ["1. हामी कम्पासलाई केन्द्र O मा 3 अर्धव्यासका साथ राख्छौं।", "2. 0° (दायाँतिर) बाट सुरु गरी घडीको विपरीत दिशामा घुमाउँछौं।", "3. 180° सँग एउटा पूरा अर्धवृत्त बन्छ!"],
+            interpolate: ["1. हामीसँग दुई छेउका बिन्दु A र B छन्।", "2. interpolate(A, B, 0.5) ठीक 50% (मध्य) सम्म जान्छ।", "3. यो रह्यो केन्द्रमा मध्यबिन्दु M(0, 0.5)!"],
+            parallel: ["1. हामी रेखाखण्ड s1 र बाहिरी बिन्दु P बाट सुरु गर्छौं।", "2. parallel(s1, P) ले बिन्दु P हुँदै जाने उही ढलानको रेखा कोर्छ।"],
+            perp: ["1. हामी रेखाखण्ड s1 र बिन्दु P बाट सुरु गर्छौं।", "2. perp(s1, P) ले बिन्दु P हुँदै जाने 90° समकोण रेखा कोर्छ।"],
+            style: ["1. हामी एक आधार वृत्त c1 = arc(O, 2, 0, 360) बनाउँछौं।", "2. stroke(c1, 6) बाट किनारालाई मोटो बनाउँछौं।", "3. fill(c1, 0.35) बाट भित्र रङ भर्छौं र Settings बाट रङ छान्छौं!"]
+        },
+        guideHtml: `
+            <p class="bg-orange-50 border border-orange-200 p-3.5 rounded-xl text-zinc-800"><strong>मूल नियम:</strong> प्रत्येक पंक्तिमा एउटा आदेश लेख्नुहोस्। पहिले नाम (जस्तै <code>A =</code>) र त्यसपछि कोष्ठक <code>( )</code> मा आदेश।</p>
+            <div class="bg-white border border-stone-200 rounded-xl p-3.5"><div class="font-display font-bold text-zinc-900 text-base">1. बिन्दु, रेखाखण्ड र वृत्त</div><code class="block bg-zinc-900 text-amber-200 p-2.5 rounded-lg my-2 font-semibold">A = point(3, 2)<br>s1 = line(A, B)<br>c1 = arc(A, 4, 0, 360)</code><p class="text-stone-600">बिन्दु बनाउनुहोस्, तिनीहरूलाई रेखाले जोड्नुहोस् वा कम्पासले चाप र वृत्त बनाउनुहोस्।</p></div>
+            <div class="bg-white border border-stone-200 rounded-xl p-3.5"><div class="font-display font-bold text-zinc-900 text-base">2. मध्यबिन्दु, लम्ब र समानान्तर</div><code class="block bg-zinc-900 text-amber-200 p-2.5 rounded-lg my-2 font-semibold">M = point(interpolate(A, B, 0.5))<br>perp(s1, P)<br>parallel(s1, P)</code><p class="text-stone-600">मध्यबिन्दु पत्ता लगाउनुहोस् वा 90° लम्ब र समानान्तर रेखाहरू कोर्नुहोस्।</p></div>
+            <div class="bg-white border border-stone-200 rounded-xl p-3.5"><div class="font-display font-bold text-zinc-900 text-base">3. प्रतिच्छेदन, मोटाइ र रङ</div><code class="block bg-zinc-900 text-amber-200 p-2.5 rounded-lg my-2 font-semibold">C = point(intersect(c1, c2, 1))<br>stroke(s1, 5)</code><p class="text-stone-600">रङ छान्नको लागि सम्पादकमा लाइन नम्बरको छेउमा रहेको रङ्गीन थोप्लोमा ट्याप गर्नुहोस्।</p></div>
+        `
     },
-    subtitles: {
-      point: "निर्देशांक अक्षमा X र Y मान दिएर बिन्दु राख्नुहोस्।",
-      line: "दुई बिन्दुहरू जोडेर सिधा रेखाखण्ड कोर्नुहोस्।",
-      arc: "केन्द्र, अर्धव्यास र सुरु/अन्त्य कोणबाट चाप वा वृत्त बनाउनुहोस्।",
-      interpolate: "दुई बिन्दुको बीचमा निश्चित अनुपातमा नयाँ बिन्दु निकाल्नुहोस्।",
-      parallel: "कुनै रेखासँग समानान्तर हुने अर्को रेखा कोर्नुहोस्।",
-      perp: "दिइएको रेखासँग ९० डिग्रीको कोण बनाउने लम्ब रेखा कोर्नुहोस्।",
-      style: "stroke र fill प्रयोग गरी रेखाको मोटाइ र रङ बदल्नुहोस्।"
-    }
-  },
-
-  // 14 Esercizi (riutilizzano le funzioni check di EXERCISES)
-  exercises: [
-    {
-      title: "१. चार चतुर्थांशका बिन्दुहरू",
-      desc: "कार्तेसियन समतलका चारै चतुर्थांशमा एक-एक बिन्दु राख्नुहोस्।",
-      hint: "point(x, y) प्रयोग गर्नुहोस्, जस्तै point(3, 4) र point(-3, -4)।",
-      check: EXERCISES[0].check
-    },
-    {
-      title: "२. रेखाखण्डहरू",
-      desc: "दुई बिन्दुहरू बनाएर तिनीहरूलाई रेखाखण्डले जोड्नुहोस्।",
-      hint: "पहिले A = point(-4, 2) र B = point(4, 2) बनाउनुहोस्, त्यसपछि line(A, B) लेख्नुहोस्।",
-      check: EXERCISES[1].check
-    },
-    {
-      title: "३. त्रिभुज",
-      desc: "तीन बिन्दुहरू जोडेर एउटा त्रिभुज निर्माण गर्नुहोस्।",
-      hint: "तीन बिन्दु A, B, C बनाउनुहोस् र line() वा polygon(A, B, C) प्रयोग गर्नुहोस्।",
-      check: EXERCISES[2].check
-    },
-    {
-      title: "४. वृत्तहरू",
-      desc: "केन्द्र (0, 0) र अर्धव्यास 4 भएको पूरा वृत्त कोर्नुहोस्।",
-      hint: "arc(point(0, 0), 4, 0, 360) प्रयोग गर्नुहोस्।",
-      check: EXERCISES[3].check
-    },
-    {
-      title: "५. सङ्केन्द्रित चापहरू",
-      desc: "एउटै केन्द्र तर फरक अर्धव्यास भएका दुई अर्धवृत्ताकार चापहरू कोर्नुहोस्।",
-      hint: "कोण 0 देखि 180 सम्म राख्नुहोस् र अर्धव्यास फरक-फरक दिनुहोस्।",
-      check: EXERCISES[4].check
-    },
-    {
-      title: "६. मध्यबिन्दु (Midpoint)",
-      desc: "दिइएको रेखाखण्डको ठ्याक्कै बीचको बिन्दु पत्ता लगाउनुहोस्।",
-      hint: "M = interpolate(A, B, 0.5) प्रयोग गर्नुहोस्।",
-      check: EXERCISES[5].check
-    },
-    {
-      title: "७. लम्ब रेखाहरू",
-      desc: "दिइएको रेखासँग लम्ब (९०°) हुने रेखा कोर्नुहोस्।",
-      hint: "perp(L, P) आदेश प्रयोग गर्नुहोस्।",
-      check: EXERCISES[6].check
-    },
-    {
-      title: "८. समानान्तर रेखाहरू",
-      desc: "दिइएको रेखासँग समानान्तर हुने गरी बाहिरी बिन्दुबाट रेखा कोर्नुहोस्।",
-      hint: "parallel(L, P) आदेश प्रयोग गर्नुहोस्।",
-      check: EXERCISES[7].check
-    },
-    {
-      title: "९. प्रतिच्छेदन बिन्दु",
-      desc: "दुई रेखा वा चापहरू काटिने बिन्दु पत्ता लगाउनुहोस्।",
-      hint: "intersect(obj1, obj2, 1) प्रयोग गर्नुहोस्।",
-      check: EXERCISES[8].check
-    },
-    {
-      title: "१०. बहुभुजहरू",
-      desc: "चार वा सोभन्दा बढी भुजा भएको बन्द बहुभुज कोर्नुहोस्।",
-      hint: "polygon(A, B, C, D) प्रयोग गर्नुहोस्।",
-      check: EXERCISES[9].check
-    },
-    {
-      title: "११. हाँसिरहेको अनुहार (Smiley)",
-      desc: "वृत्त र चापहरूको प्रयोग गरी हाँसिरहेको अनुहार बनाउनुहोस्।",
-      hint: "अनुहारको लागि ठूलो वृत्त, आँखाको लागि दुई साना बिन्दु र मुस्कानको लागि तल्लो चाप (180 देखि 360) बनाउनुहोस्।",
-      check: EXERCISES[10].check
-    },
-    {
-      title: "१२. ७ रङको इन्द्रेणी",
-      desc: "मोटो रेखा (stroke) र ७ फरक रङहरू प्रयोग गरी इन्द्रेणी कोर्नुहोस्।",
-      hint: "प्रत्येक चाप अघि stroke(6) र रङ परिवर्तन गर्नुहोस्।",
-      check: EXERCISES[11].check
-    },
-    {
-      title: "१३. समबाहु त्रिभुज (युक्लिडियन निर्माण)",
-      desc: "रुलर र कम्पास (वृत्त र प्रतिच्छेदन) को सहायताले समबाहु त्रिभुज बनाउनुहोस्।",
-      hint: "आधार AB को लम्बाइ बराबर अर्धव्यास लिएर A र B केन्द्रबाट दुई वृत्त कोर्नुहोस् र तिनीहरूको प्रतिच्छेदन बिन्दु C जोड्नुहोस्।",
-      check: EXERCISES[12].check
-    },
-    {
-      title: "१४. स्वतन्त्र अभ्यास (Free Lab)",
-      desc: "आफ्नो इच्छाअनुसार जुनसुकै ज्यामितीय आकृति निर्माण गर्नुहोस्।",
-      hint: "सबै सिकेका आदेशहरू स्वतन्त्र रूपमा प्रयोग गर्नुहोस्।",
-      check: EXERCISES[13].check
-    }
-  ]
-},
     
     zh: {
         welcomeTitle: '一起来学习使用 <span class="text-orange-600 block sm:inline">RoboCompass</span>',
