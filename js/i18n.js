@@ -1242,6 +1242,171 @@ const I18N = {
             <div class="bg-white border border-stone-200 rounded-xl p-3.5"><div class="font-display font-bold text-zinc-900 text-base">৩. ছেদবিন্দু, পুরুত্ব ও রং</div><code class="block bg-zinc-900 text-amber-200 p-2.5 rounded-lg my-2 font-semibold">C = point(intersect(c1, c2, 1))<br>stroke(s1, 5)</code><p class="text-stone-600">রং বাছাই করতে এডিটরে লাইন নম্বরের পাশের রঙিন বৃত্তে চাপ দিন।</p></div>
         `
     },
+
+ne: {
+  langName: "नेपाली",
+  dir: "ltr",
+
+  // Interfaccia principale
+  appTitle: "RoboCompass",
+  appSubtitle: "अन्तरक्रियात्मक ज्यामिति निर्माण",
+  runBtn: "चलाउनुहोस्",
+  resetBtn: "रिसेट",
+  nextBtn: "अर्को अभ्यास",
+  prevBtn: "अघिल्लो अभ्यास",
+  exerciseLabel: "अभ्यास",
+  guideBtn: "आदेश गाइड",
+  visualLearnBtn: "चित्र हेरेर सिक्नुहोस्",
+  settingsBtn: "सेटिङहरू",
+  closeBtn: "बन्द गर्नुहोस्",
+  hintBtn: "संकेत",
+
+  // Schede mobile
+  tabCode: "कोड",
+  tabCanvas: "चित्र",
+  tabTask: "निर्देशन",
+
+  // Finestra Impostazioni
+  settingsTitle: "रेखाचित्र सेटिङहरू",
+  strokeColorLabel: "रेखाको रङ",
+  showLabelsLabel: "बिन्दुका लेबलहरू देखाउनुहोस्",
+  labelOffsetLabel: "लेबलको दूरी (Offset)",
+  speedLabel: "कोर्ने गति",
+
+  // Messaggi di stato ed errori
+  successTitle: "बधाई छ! अभ्यास पूरा भयो!",
+  successMsg: "तपाईंले ज्यामितीय निर्माण सही तरिकाले पूरा गर्नुभयो।",
+  errorLinePrefix: "लाइन",
+  syntaxError: "अमान्य आदेश वा वाक्यरचना त्रुटि।",
+
+  // Guida ai comandi
+  commands: [
+    { cmd: "point(x, y)", desc: "(x, y) निर्देशांकमा बिन्दु बनाउँछ।" },
+    { cmd: "line(A, B)", desc: "बिन्दु A र B जोड्ने रेखाखण्ड कोर्छ।" },
+    { cmd: "arc(C, r, a1, a2)", desc: "केन्द्र C, अर्धव्यास r र कोण a1 देखि a2 सम्मको चाप कोर्छ।" },
+    { cmd: "interpolate(A, B, t)", desc: "A र B बीचको t अनुपातमा (मध्यबिन्दुको लागि 0.5) बिन्दु पत्ता लगाउँछ।" },
+    { cmd: "perp(L, P)", desc: "रेखा L सँग लम्ब हुने गरी बिन्दु P बाट जाने रेखा कोर्छ।" },
+    { cmd: "parallel(L, P)", desc: "रेखा L सँग समानान्तर हुने गरी बिन्दु P बाट जाने रेखा कोर्छ।" },
+    { cmd: "intersect(o1, o2, n)", desc: "दुई रेखा वा वृत्तहरूको प्रतिच्छेदन बिन्दु पत्ता लगाउँछ।" },
+    { cmd: "polygon(A, B, C, ...)", desc: "दिइएका बिन्दुहरू जोडेर बहुभुज बनाउँछ।" },
+    { cmd: "stroke(w)", desc: "रेखाको मोटाइ (px मा) निर्धारण गर्छ।" },
+    { cmd: "fill(color)", desc: "बन्द आकृतिको भित्री रङ भर्छ।" }
+  ],
+
+  // Modale "Impara guardando il disegno" (visual-learn.js)
+  visualLearn: {
+    title: "चित्र कोरेको हेरेर सिक्नुहोस्",
+    modeInteractive: "अन्तरक्रियात्मक प्रयोगशाला",
+    modeVideo: "भिडियो ट्युटोरियल",
+    tabs: {
+      point: "बिन्दु (Point)",
+      line: "रेखा (Line)",
+      arc: "चाप (Arc)",
+      interpolate: "मध्यबिन्दु (Interpolate)",
+      parallel: "समानान्तर (Parallel)",
+      perp: "लम्ब (Perp)",
+      style: "शैली (Style)"
+    },
+    subtitles: {
+      point: "निर्देशांक अक्षमा X र Y मान दिएर बिन्दु राख्नुहोस्।",
+      line: "दुई बिन्दुहरू जोडेर सिधा रेखाखण्ड कोर्नुहोस्।",
+      arc: "केन्द्र, अर्धव्यास र सुरु/अन्त्य कोणबाट चाप वा वृत्त बनाउनुहोस्।",
+      interpolate: "दुई बिन्दुको बीचमा निश्चित अनुपातमा नयाँ बिन्दु निकाल्नुहोस्।",
+      parallel: "कुनै रेखासँग समानान्तर हुने अर्को रेखा कोर्नुहोस्।",
+      perp: "दिइएको रेखासँग ९० डिग्रीको कोण बनाउने लम्ब रेखा कोर्नुहोस्।",
+      style: "stroke र fill प्रयोग गरी रेखाको मोटाइ र रङ बदल्नुहोस्।"
+    }
+  },
+
+  // 14 Esercizi (riutilizzano le funzioni check di EXERCISES)
+  exercises: [
+    {
+      title: "१. चार चतुर्थांशका बिन्दुहरू",
+      desc: "कार्तेसियन समतलका चारै चतुर्थांशमा एक-एक बिन्दु राख्नुहोस्।",
+      hint: "point(x, y) प्रयोग गर्नुहोस्, जस्तै point(3, 4) र point(-3, -4)।",
+      check: EXERCISES[0].check
+    },
+    {
+      title: "२. रेखाखण्डहरू",
+      desc: "दुई बिन्दुहरू बनाएर तिनीहरूलाई रेखाखण्डले जोड्नुहोस्।",
+      hint: "पहिले A = point(-4, 2) र B = point(4, 2) बनाउनुहोस्, त्यसपछि line(A, B) लेख्नुहोस्।",
+      check: EXERCISES[1].check
+    },
+    {
+      title: "३. त्रिभुज",
+      desc: "तीन बिन्दुहरू जोडेर एउटा त्रिभुज निर्माण गर्नुहोस्।",
+      hint: "तीन बिन्दु A, B, C बनाउनुहोस् र line() वा polygon(A, B, C) प्रयोग गर्नुहोस्।",
+      check: EXERCISES[2].check
+    },
+    {
+      title: "४. वृत्तहरू",
+      desc: "केन्द्र (0, 0) र अर्धव्यास 4 भएको पूरा वृत्त कोर्नुहोस्।",
+      hint: "arc(point(0, 0), 4, 0, 360) प्रयोग गर्नुहोस्।",
+      check: EXERCISES[3].check
+    },
+    {
+      title: "५. सङ्केन्द्रित चापहरू",
+      desc: "एउटै केन्द्र तर फरक अर्धव्यास भएका दुई अर्धवृत्ताकार चापहरू कोर्नुहोस्।",
+      hint: "कोण 0 देखि 180 सम्म राख्नुहोस् र अर्धव्यास फरक-फरक दिनुहोस्।",
+      check: EXERCISES[4].check
+    },
+    {
+      title: "६. मध्यबिन्दु (Midpoint)",
+      desc: "दिइएको रेखाखण्डको ठ्याक्कै बीचको बिन्दु पत्ता लगाउनुहोस्।",
+      hint: "M = interpolate(A, B, 0.5) प्रयोग गर्नुहोस्।",
+      check: EXERCISES[5].check
+    },
+    {
+      title: "७. लम्ब रेखाहरू",
+      desc: "दिइएको रेखासँग लम्ब (९०°) हुने रेखा कोर्नुहोस्।",
+      hint: "perp(L, P) आदेश प्रयोग गर्नुहोस्।",
+      check: EXERCISES[6].check
+    },
+    {
+      title: "८. समानान्तर रेखाहरू",
+      desc: "दिइएको रेखासँग समानान्तर हुने गरी बाहिरी बिन्दुबाट रेखा कोर्नुहोस्।",
+      hint: "parallel(L, P) आदेश प्रयोग गर्नुहोस्।",
+      check: EXERCISES[7].check
+    },
+    {
+      title: "९. प्रतिच्छेदन बिन्दु",
+      desc: "दुई रेखा वा चापहरू काटिने बिन्दु पत्ता लगाउनुहोस्।",
+      hint: "intersect(obj1, obj2, 1) प्रयोग गर्नुहोस्।",
+      check: EXERCISES[8].check
+    },
+    {
+      title: "१०. बहुभुजहरू",
+      desc: "चार वा सोभन्दा बढी भुजा भएको बन्द बहुभुज कोर्नुहोस्।",
+      hint: "polygon(A, B, C, D) प्रयोग गर्नुहोस्।",
+      check: EXERCISES[9].check
+    },
+    {
+      title: "११. हाँसिरहेको अनुहार (Smiley)",
+      desc: "वृत्त र चापहरूको प्रयोग गरी हाँसिरहेको अनुहार बनाउनुहोस्।",
+      hint: "अनुहारको लागि ठूलो वृत्त, आँखाको लागि दुई साना बिन्दु र मुस्कानको लागि तल्लो चाप (180 देखि 360) बनाउनुहोस्।",
+      check: EXERCISES[10].check
+    },
+    {
+      title: "१२. ७ रङको इन्द्रेणी",
+      desc: "मोटो रेखा (stroke) र ७ फरक रङहरू प्रयोग गरी इन्द्रेणी कोर्नुहोस्।",
+      hint: "प्रत्येक चाप अघि stroke(6) र रङ परिवर्तन गर्नुहोस्।",
+      check: EXERCISES[11].check
+    },
+    {
+      title: "१३. समबाहु त्रिभुज (युक्लिडियन निर्माण)",
+      desc: "रुलर र कम्पास (वृत्त र प्रतिच्छेदन) को सहायताले समबाहु त्रिभुज बनाउनुहोस्।",
+      hint: "आधार AB को लम्बाइ बराबर अर्धव्यास लिएर A र B केन्द्रबाट दुई वृत्त कोर्नुहोस् र तिनीहरूको प्रतिच्छेदन बिन्दु C जोड्नुहोस्।",
+      check: EXERCISES[12].check
+    },
+    {
+      title: "१४. स्वतन्त्र अभ्यास (Free Lab)",
+      desc: "आफ्नो इच्छाअनुसार जुनसुकै ज्यामितीय आकृति निर्माण गर्नुहोस्।",
+      hint: "सबै सिकेका आदेशहरू स्वतन्त्र रूपमा प्रयोग गर्नुहोस्।",
+      check: EXERCISES[13].check
+    }
+  ]
+},
+    
     zh: {
         welcomeTitle: '一起来学习使用 <span class="text-orange-600 block sm:inline">RoboCompass</span>',
         startBtn: '立即开始',
