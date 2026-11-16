@@ -63,7 +63,7 @@ function applyLanguage(lang) {
     document.getElementById('nav-tab-2').textContent = t('navTab2');
     document.getElementById('nav-tab-3').textContent = t('navTab3');
     const settingsBtnLbl = document.getElementById('lbl-settings-btn');
-    if (settingsBtnLbl) settingsBtnLbl.textContent = (lang === 'it') ? 'Impostazioni' : 'Settings';
+if (settingsBtnLbl) settingsBtnLbl.textContent = t('settingsBtn');
     document.getElementById('btn-apply-settings').textContent = t('applySettings');
     document.getElementById('lbl-settings-cmd').textContent = t('settingsCmd');
     document.getElementById('lbl-settings-colors').textContent = t('settingsColors');
