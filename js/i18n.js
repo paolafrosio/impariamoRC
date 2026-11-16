@@ -1281,6 +1281,7 @@ ne: {
         exactPrefix: 'बिल्कुल सही!',
         almostPrefix: 'लगभग:',
         nextExBtn: 'अर्को अभ्यासमा जानुहोस्',
+        settingsBtn: 'सेटिङहरू',
         applySettings: 'लागू गर्नुहोस् र फेरि बनाउनुहोस्',
         settingsCmd: 'छानिएको आदेश',
         settingsColors: 'रङ:',
